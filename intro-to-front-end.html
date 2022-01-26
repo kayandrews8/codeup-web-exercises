@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
-    <title>Intro To Front End</title>
-    <style>
-        p {
-            border: 1px solid black;
-            padding: 5px;
-            border-radius: 5px;
-            margin: 10px;
-        }
-        button { margin: 10px;}
+        <title>Intro To Front End</title>
+        <style>
+            p {
+                border: 1px solid black;
+                padding: 5px;
+                border-radius: 5px;
+                margin: 10px;
+            }
+            button { margin: 10px;}
 
-        .hidden {
-            visibility: hidden;
-        }
-    </style>
-</head>
-<body>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eius excepturi expedita minima numquam quod velit voluptatibus. Facere fugit illo nihil nisi pariatur perferendis placeat provident quas, repellat, vel voluptatum!</p>
-<p id="hideable">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur dolor incidunt minus, nam, nisi officia, pariatur perferendis quaerat quos rem sed soluta tenetur voluptate voluptatem. Autem exercitationem harum officiis.</p>
-<button id="toggle">Toggle Paragraph</button>
+            .hidden {
+                visibility: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Our First COdeup File</h1>
+        <h2>Here is a simple interactive web page</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ducimus eum facilis itaque magni nobis provident quidem quos ullam ut? Aut dolorem fugit id illum inventore maxime quas similique voluptatem.</p>
 
-<script>
-    let toggleButton = document.getElementById("toggle");
+        <p id="hideable">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi at atque commodi labore, nesciunt saepe voluptas voluptatibus. Earum laudantium nihil nulla ut! Animi deserunt nisi praesentium recusandae sed, ullam.</p>
+        <button id="toggle">Toggle Paragraph</button>
 
-    let hideableParagraph = document.getElementById("hideable");
+        <script>
+        let toggleButton = document.getElementById("toggle");
 
-    toggleButton.onclick = function(){
+        let hideableParagraph = document.getElementById("hideable");
+
+        toggleButton.onclick = function(){
         let theClass = hideableParagraph.getAttribute("class");
         if (theClass == "hidden") {
-            hideableParagraph.removeAttribute("class");
+        hideableParagraph.removeAttribute("class");
         } else {
-            hideableParagraph.setAttribute("class", "hidden");
+        hideableParagraph.setAttribute("class", "hidden");
         }
-    }
-</script>
-</body>
+        }
+        </script>
+    </body>
 </html>
-
-
-
