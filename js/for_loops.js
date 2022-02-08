@@ -1,5 +1,5 @@
 
-// for (var count = 100; count >= 0; count = count -1){
+// for (var count = 100; count >= 5; count = count -5){
 //     console.log(count);
 // }
 
@@ -22,12 +22,12 @@
 //     }
 // }
 
-for (var number = 1; number < 10; number++){
-    var count = 0;
-    var emptyStr = "";
-    while (count < number){
-        emptyStr = emptyStr + number.toString();
-        count = count + 1;
-    }
-    console.log(emptyStr);
-}
+// for (var number = 1; number < 10; number++){
+//     var count = 0;
+//     var emptyStr = "";
+//     while (count < number){
+//         emptyStr = emptyStr + number.toString();
+//         count = count + 1;
+//     }
+//     console.log(emptyStr);
+// }
