@@ -30,9 +30,7 @@
      * array.
      */
     // for(var i = 0; i < peopleNames.length; i ++){
-    //     if(i !== peopleNames - 1){
     //         console.log(peopleNames[i]);
-    //     }
     // }
 
     /**
