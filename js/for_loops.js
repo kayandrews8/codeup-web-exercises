@@ -1,7 +1,7 @@
 
-// for (var count = 100; count >= 5; count = count -5){
-//     console.log(count);
-// }
+for (var count = 100; count >= 5; count -= 5){
+    console.log(count);
+}
 
 
 // function showMultiplicationTable(num){
