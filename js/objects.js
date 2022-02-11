@@ -15,8 +15,9 @@
     var person = {
         firstName: 'Kaylah',
         lastName: 'Andrews',
+
         sayHello: function(){
-            console.log("Hello from " + this.firstName + " " + this.lastName + "!")
+            return "Hello from " + this.firstName + " " + this.lastName + "!";
         }
     }
     // person.sayHello();
@@ -50,8 +51,8 @@
         {name: 'George', amount: 320}
     ];
     shoppers.forEach(function(shopper){
-        if(shopper.amount > 200){
-            console.log(shopper.name + " owes $" + shopper.amount + " before discount, and $" + (shopper.amount - (shopper.amount * .12)).toFixed(2) + " after discount");
+        if(shopper.amount >= 200){
+            console.log(shopper.name + " owes $" + shopper.amount + " before the discount. Their discount is $" + (shopper.amount * .12) + ", so now they owe $" + (shopper.amount - (shopper.amount * .12)).toFixed(2) + " after discount");
         } else{
             console.log(shopper.name + " owes $" + shopper.amount + " because there is no discount");
         }
