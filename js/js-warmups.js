@@ -57,3 +57,9 @@ function evenOrOdd(number){
     }
 }
 // console.log(evenOrOdd(14));
+
+// Write a function called removeBs that takes in an array and removes ever letter B regardless of case
+function removeBs(){
+    var noBs = ['abc', 'berries', 'baby', 'bad']
+    var bsGone = noBs.filter();
+}
