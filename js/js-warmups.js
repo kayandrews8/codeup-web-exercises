@@ -63,3 +63,29 @@ function removeBs(){
     var noBs = ['abc', 'berries', 'baby', 'bad']
     var bsGone = noBs.filter();
 }
+/*
+Write a function, createUserMsg, that takes in a user object like the following...
+{
+    username: ‘jbomb’,
+    email: ‘john@email.com’,
+    isAdmin: true
+}
+...and returns a string output that displays in the console like this...
+‘User jbomb is an admin and can be reached at john@email.com’
+If jbomb were not an admin, the message should display...
+‘User jbomb is not an admin and can be reached at john@email.com’
+*/
+
+var userInfo = {
+    username: 'kandrews22',
+    email: 'kandrews4321@ymail.com',
+    isAdmin: true
+}
+
+function createUserMsg(userInformation){
+    if(userInformation.isAdmin === true){
+        console.log('The user ' + userInformation.username + ' is an admin and can be reached at ' + userInformation.email);
+    } else {
+        console.log('The user ' + userInformation.username + ' is not an admin and can be reached at ' + userInformation.email);
+    }
+}
