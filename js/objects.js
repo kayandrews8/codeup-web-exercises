@@ -84,13 +84,13 @@
         author: {firstName: 'Steve', lastName: 'Strong'},
         },
         {title: 'What\'s for Dinner?',
-        author: { firstName: 'Kaylah', lastName: 'Hungry'}
+        author: { firstName: 'Kaylah', lastName: 'Hungary'}
         }
     ];
 
     books.forEach(function(book){
         var bookNum = books.indexOf(book) + 1;
-        console.log("Book #" + bookNum + " Title: " + book.title + " Author: " + book.author.firstName + ' ' + book.author.lastName)
+        console.log("Book #" + bookNum + '\n' +"Title: " + book.title + '\n' + "Author: " + book.author.firstName + ' ' + book.author.lastName)
     });
 
     /**
