@@ -89,3 +89,20 @@ function createUserMsg(userInformation){
         console.log('The user ' + userInformation.username + ' is not an admin and can be reached at ' + userInformation.email);
     }
 }
+
+// Write a function named areaOrPerimeter that returns the area of a square OR the perimeter of a rectangle based on the parameters passed into the function
+//Bonus: have the function return false if the input is not a number or a numeric string
+function areaOrPerimeter(num1, num2){
+    if(isNaN(num1) || isNaN(num2)){
+        return false;
+    } else if(num1 === num2){
+        return num1 * num2;
+    }else {
+        return (num1 * 2) + (num2 *2);
+    }
+
+}
+
+// console.log(areaOrPerimeter(2,2));
+// console.log(areaOrPerimeter(4,6));
+// console.log(areaOrPerimeter('2','bob'));
