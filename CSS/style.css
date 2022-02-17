@@ -1,0 +1,48 @@
+h1{
+    text-align: center;
+}
+
+h1, h2 {
+    color: #3d210e;
+    text-decoration: underline;
+}
+
+body {
+    /*background-color: #8c8172;*/
+    background-image: url(../images/paint-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+ul {
+    list-style: circle;
+}
+
+table {
+    table-layout: auto;
+    border: solid #3d210e;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: thin solid #3d210e;
+    padding: 15px;
+}
+
+th {
+    background: #8c8172;
+}
+
+td {
+    background: bisque;
+}
+
+a:link{
+    color: #8c8172;
+}
+
+a:visited {
+    color: saddlebrown;
+}
