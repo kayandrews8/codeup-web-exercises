@@ -31,7 +31,7 @@ fieldset {
 .width-80 {
     /* The element with this class should be 80% of the width and it must be centered */
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
-    margin: auto;
+    margin: 0 auto;
     width: 80%;
 }
 
@@ -67,14 +67,14 @@ fieldset {
 .form-control {
     /* There must be 4px on top of the text and below the text of an input with this class */
     /* It should have a separation of .5em from elements on top of it and below it */
+    padding: 4px;
     margin-top: .5em;
     margin-bottom: .5em;
-    padding: 4px;
 
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width: calc(100% - 8px);
+    width: calc(100% - 10px);
 }
 
 

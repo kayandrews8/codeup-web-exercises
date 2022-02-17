@@ -11,7 +11,7 @@ body, html {
     border: 1px solid lightgrey;
     border-radius: 7px;
     margin: 8px auto;
-    padding: 5px;
+    padding: 8px;
     color: #4169e1;
     background-color: rgba(160, 179, 236, 0.75);
 }
@@ -21,7 +21,7 @@ body, html {
     border: 1px solid lightgrey;
     border-radius: 7px;
     margin: 8px auto;
-    padding: 5px;
+    padding: 8px;
     color: #295729;
     background-color: rgba(165, 238, 165, 0.75);
 }
@@ -31,7 +31,7 @@ body, html {
     border: 1px solid lightgrey;
     border-radius: 7px;
     margin: 8px auto;
-    padding: 5px;
+    padding: 8px;
     color: #806b0b;
     background-color: rgba(236, 221, 157, 0.75);
 }
@@ -41,7 +41,7 @@ body, html {
     border: 1px solid lightgrey;
     border-radius: 7px;
     margin: 8px auto;
-    padding: 5px;
+    padding: 8px;
     color: darkred;
     background-color: rgba(241, 155, 155, 0.75);
 }
