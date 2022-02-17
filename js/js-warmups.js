@@ -106,3 +106,15 @@ function areaOrPerimeter(num1, num2){
 // console.log(areaOrPerimeter(2,2));
 // console.log(areaOrPerimeter(4,6));
 // console.log(areaOrPerimeter('2','bob'));
+
+
+//Write a function that takes in two numeric strings, adds the numbers and returns the sum as a string
+// Bonus: return false if the input is anything other than a numeric string
+
+function sumTheStrings(input1, input2){
+    if(typeof input1 !== 'string' || typeof input2 !== 'string'){
+        return false;
+    }else{
+        return (parseFloat(input1) + parseFloat(input2)).toString();
+    }
+}
