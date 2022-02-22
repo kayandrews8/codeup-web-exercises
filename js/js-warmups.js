@@ -118,3 +118,43 @@ function sumTheStrings(input1, input2){
         return (parseFloat(input1) + parseFloat(input2)).toString();
     }
 }
+/**
+================================= WARM UP
+
+Create a function, createNames, that takes in an array of first names and an array of last names. The function should return an array of name objects with firstName and lastName properties with the input array values. Assume both input arrays are not empty, the same length and only contain string elements.
+
+    var firstNames = ['CJ', 'Max', 'Claude', 'Meowmeow'];
+var lastNames = ['Cat', 'Feline', 'Kitten', 'Calico'];
+
+createNames(firstNames, lastNames) // returns...
+
+    [
+    {
+        firstName: 'CJ',
+        lastName: 'Cat'
+    },
+        {
+            firstName: 'Max',
+            lastName: 'Feline'
+        },
+        {
+            firstName: 'Claude',
+            lastName: 'Kitten'
+        },
+        {
+            firstName: 'Meowmeow',
+            lastName: 'Calico'
+        }
+    ]
+
+HINT: a solution may involve using a for loop to iterate over the length of one array to push each name object onto an array of name objects that will be returned from the function. */
+
+function createNames(array1, array2){
+    for(var i = 0; i < firstName.length; i ++){
+        return {firstName: array1[1], lastName: array2[1]};
+    }
+}
+
+var firstName = ['kay', 'jay', 'moi', 'ton'];
+var lastName = ['and', 'band', 'cand', 'dand'];
+// console.log(createNames(firstName, lastName));
