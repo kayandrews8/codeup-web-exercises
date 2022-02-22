@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Queries Practice</title>
+    <style>
+        body {
+            background: #cbffcd;
+        }
+        #container{
+            background: lightgrey;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-evenly;
+            width: 80%;
+            margin: auto;
+        }
+        div {
+            width: 25%;
+        }
+        @media screen and (min-width: 300px) {
+            div {
+                width: 100%;
+            }
+            body {
+                background: antiquewhite;
+            }
+
+        }
+
+        @media screen and (min-width: 786px){
+            body {
+                background: cornflowerblue;
+            }
+            div {
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 980px){
+            body {
+                background: lightsalmon;
+            }
+            div {
+                width: 25%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<article id="container">
+    <div>
+        <h2>Header 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cupiditate dolore dolorem doloremque eaque eos ex expedita ipsa labore modi necessitatibus nemo neque officiis, provident quisquam, repellendus veritatis, vitae voluptates!</p>
+
+    </div>
+    <div>
+        <h2>Header 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut corporis eos, facilis id maiores tempore. Asperiores delectus doloremque expedita incidunt iste libero, nam nihil possimus quibusdam, quisquam ratione veniam!</p>
+    </div>
+    <div>
+        <h2>Header 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut corporis eos, facilis id maiores tempore. Asperiores delectus doloremque expedita incidunt iste libero, nam nihil possimus quibusdam, quisquam ratione veniam!</p>
+    </div>
+    <div>
+        <h2>Header 4</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut corporis eos, facilis id maiores tempore. Asperiores delectus doloremque expedita incidunt iste libero, nam nihil possimus quibusdam, quisquam ratione veniam!</p>
+    </div>
+    <div>
+        <h2>Header 5</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut corporis eos, facilis id maiores tempore. Asperiores delectus doloremque expedita incidunt iste libero, nam nihil possimus quibusdam, quisquam ratione veniam!</p>
+    </div>
+    <div>
+        <h2>Header 6</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut corporis eos, facilis id maiores tempore. Asperiores delectus doloremque expedita incidunt iste libero, nam nihil possimus quibusdam, quisquam ratione veniam!</p>
+    </div>
+</article>
+
+</body>
+</html>
