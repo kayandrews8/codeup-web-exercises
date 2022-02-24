@@ -158,3 +158,16 @@ function createNames(array1, array2){
 var firstName = ['kay', 'jay', 'moi', 'ton'];
 var lastName = ['and', 'band', 'cand', 'dand'];
 // console.log(createNames(firstName, lastName));
+
+
+// Write a function that accepts two integers and returns the remainder by diving the larger value by the smaller value. Dividing by 0 should return NaN.
+
+function remainder(num1,num2){
+    if(num1 > num2){
+        return num1 % num2;
+    } else if(num2 > num1){
+        return num2 % num1;
+    }
+}
+
+// console.log(remainder(14,135));
