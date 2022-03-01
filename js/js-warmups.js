@@ -171,3 +171,14 @@ function remainder(num1,num2){
 }
 
 // console.log(remainder(14,135));
+
+function isLockNessMonster(str){
+    return (str.includes('three fifty') || str.includes('tree fiddy') || str.includes('3.50'));
+}
+
+// console.log(isLockNessMonster("The leading batter this year is hitting three fifty"));
+// console.log(isLockNessMonster("The cost of the ferry across Loch Ness is 3.50"));
+// console.log(isLockNessMonster("Your girlscout cookies are ready to ship. Your total comes to tree fiddy"));
+// console.log(isLockNessMonster("Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance."));
+
+
