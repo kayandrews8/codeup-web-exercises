@@ -182,3 +182,31 @@ function isLockNessMonster(str){
 // console.log(isLockNessMonster("Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance."));
 
 
+//Creat a function that accepts an object with two properties, parcelNumber and weight, and returns the weight.
+var parcel = {
+    parcelNumber: 4,
+    weight: 18
+}
+function parcelWeight(object){
+    return parcel.weight;
+}
+
+// console.log(parcelWeight(parcel));
+
+//Create a function that accepts an array of objects with two properties, parcelNumber and weight, and returns the total weight of all parcels
+
+var parcels = [
+    {parcelNumber: 6, weight: 20},
+    {parcelNumber: 4, weight: 13},
+    {parcelNumber: 9, weight: 18},
+    {parcelNumber: 3, weight: 9}
+]
+function totalWeight(arr){
+    var total = 0;
+    for(var i = 0; i < parcels.length; i++){
+        total += parcels[i].weight;
+    }
+    return total;
+}
+
+// console.log(totalWeight(parcels));
