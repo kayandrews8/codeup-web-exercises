@@ -210,3 +210,14 @@ function totalWeight(arr){
 }
 
 // console.log(totalWeight(parcels));
+
+
+//Create a header that says "Good morning!", then create a button that says 'Press if after 12pm" that will change the heading to "Good afternoon"
+
+var greeting = document.getElementById('main-header');
+function changeGreeting(){
+    greeting.innerText = 'Good afternoon!'
+}
+
+greeting.addEventListener('click', changeGreeting);
+
