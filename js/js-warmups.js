@@ -215,9 +215,99 @@ function totalWeight(arr){
 //Create a header that says "Good morning!", then create a button that says 'Press if after 12pm" that will change the heading to "Good afternoon"
 
 var greeting = document.getElementById('main-header');
+var greetingButton = document.querySelector('button');
 function changeGreeting(){
     greeting.innerText = 'Good afternoon!'
 }
 
-greeting.addEventListener('click', changeGreeting);
+greetingButton.addEventListener('click', changeGreeting);
 
+/*
+================================= JS WARM UP
+
+Consider the following array of users:
+
+    var users = [
+        {
+            username: 'fsmith',
+            email: 'fsmith@email.com',
+            numberOfLogins: 23
+        },
+        {
+            username: 'ksmith',
+            email: 'ksmith@email.com',
+            numberOfLogins: 100
+        },
+        {
+            username: 'lsmith',
+            email: 'lsmith@email.com',
+            numberOfLogins: 10
+        }
+    ];
+
+1. Create a function, returnFirstUser, that takes in an array of user objects and returns the first user object.
+
+returnFirstUser(users) should return...
+
+{
+    username: 'fsmith',
+        email: 'fsmith@email.com',
+    numberOfLogins: 23
+}
+
+2. Create a function, returnTotalUserLogins, that takes in an array of user objects and returns the total count of logins
+for all users.
+
+returnTotalUserLogins(users) should return... 133
+
+3. (optional bonus) create a function, returnMostFrequentUser, that takes in an array of user objects and returns the
+user object with the highest number of logins.
+
+
+returnMostFrequentUser(users) should return...
+
+{
+    username: 'ksmith',
+        email: 'ksmith@email.com',
+    numberOfLogins: 100
+}
+*/
+
+var users = [
+    {
+        username: 'fsmith',
+        email: 'fsmith@email.com',
+        numberOfLogins: 23
+    },
+    {
+        username: 'ksmith',
+        email: 'ksmith@email.com',
+        numberOfLogins: 100
+    },
+    {
+        username: 'lsmith',
+        email: 'lsmith@email.com',
+        numberOfLogins: 10
+    }
+];
+
+function returnFirstUser(arr){
+    return arr[0];
+}
+
+// console.log(returnFirstUser(users));
+
+
+function returnTotalUserLogins(arr){  //can also use a for each loop to achieve the same return statement
+    var total = 0;
+    for(var i = 0; i < users.length; i++){
+        total += users[i].numberOfLogins;
+    }
+    return total;
+}
+
+// console.log(returnTotalUserLogins(users));
+
+function returnMostFrequentUser(){
+
+}
