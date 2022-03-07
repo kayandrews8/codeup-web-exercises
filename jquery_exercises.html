@@ -23,11 +23,16 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <!--jquery can also be downloaded for offline use (right click and choose "save link as", then save in js folder)-->
    <script>
-        $('li').css('font-size', '20px');
-        $('h1, p, li');
-        $('h1').each(function(){
-            alert('main page header');
-        });
+       $(document).ready(function() {
+
+
+           $('li').css('font-size', '20px');
+           $('h1, p, li');
+               alert($('h1').html());
+
+
+
+       });
    </script>
 </body>
 </html>
