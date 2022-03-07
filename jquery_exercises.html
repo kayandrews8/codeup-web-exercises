@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Exercises</title>
+</head>
+<body>
+    <h1 id="main-header">JQuery Exercises</h1>
+    <div id="main-div">
+        <h2 class="codeup">Working with JQuery</h2>
+        <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad minus nam neque omnis quibusdam repellendus reprehenderit tempore! Asperiores ea error et iure modi neque, quia reprehenderit repudiandae sapiente sed voluptates!</p>
+        <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, adipisci amet aperiam, enim error est fuga hic inventore iste, iure natus nostrum odit provident recusandae rem? Commodi hic quasi tempore.</p>
+        <ul class="directions">
+            <li>Up</li>
+            <li>Down</li>
+            <li>Left</li>
+            <li>Right</li>
+        </ul>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <!--jquery can also be downloaded for offline use (right click and choose "save link as", then save in js folder)-->
+   <script>
+        $('li').css('font-size', '20px');
+        $('h1, p, li');
+        $('h1').each(function(){
+            alert('main page header');
+        });
+   </script>
+</body>
+</html>
