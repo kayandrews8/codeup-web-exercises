@@ -26,11 +26,27 @@
        $(document).ready(function() {
 
 
-           $('li').css('font-size', '20px');
-           $('h1, p, li').css('background-color', 'orange');
-               alert($('h1').html());
+           // $('li').css('font-size', '20px');
+           // $('h1, p, li').css('background-color', 'orange');
+           //     alert($('h1').html());
 
-
+           //change the background color of h1
+           $('h1').click(function(){
+               $(this).css('background-color', 'lavender');
+           });
+           //change the font size of each "p" to 18 px when double-clicked
+           $('p').dblclick(function(){
+               $(this).css('font-size', '18px');
+           });
+           //change the color of each "li" to red and make sure it changes back when the mouse leaves
+           $('li').hover(
+               function(){
+                   $(this).css('color', 'red');
+           },
+                function(){
+                   $(this).css('color', 'black');
+                }
+           );
 
        });
    </script>
