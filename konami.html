@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <style>
+        body{
+            background: bisque;
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Konami Code</h1>
+<h2>Can you figure out the secret?</h2>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+    function onKonamiCode(cb) {
+        var input = '';
+        var konami = '3838404037393739666513';
+        document.addEventListener('keydown', function (e) {
+            input += ("" + e.keyCode);
+            if (input === konami) {
+                return cb();
+            }
+            if (!konami.indexOf(input)) return;
+            input = ("" + e.keyCode);
+        });
+    }
+
+    onKonamiCode(function () {
+        alert('You have added 30 lives!')
+        $('body').css('background-color', '#d6b7f3');
+        $('h1').css('font-size', '64px');
+        $('h2').html('Congratulations!');
+    });
+
+</script>
+</body>
+</html>
