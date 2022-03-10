@@ -465,6 +465,47 @@ function computeOperations(operators, startingNum) {
     return total;
 }
 
-console.log(computeOperations(operations1, 10));
-console.log(computeOperations(operations2, 10));
-console.log(computeOperations(operations3, 10));
+// console.log(computeOperations(operations1, 10));
+// console.log(computeOperations(operations2, 10));
+// console.log(computeOperations(operations3, 10));
+
+
+/*Create a function, addTwos, that takes in a array of integers and returns the sum of all 2s in the array. If no 2s are in the array, return 0.
+
+Examples:
+
+var nums1 = [1, 2, 3, 4, 5];
+var nums2 = [2, 2, 3, 4, 5];
+var nums3 = [10, 0, -5, 4, 5];
+var nums4 = [2, 2, -5, 2, 2];
+var nums5 = [2, 2, 2, 2, 2];
+
+addTwos(nums1) // returns 2
+addTwos(nums2) // returns 4
+addTwos(nums3) // returns 0
+addTwos(nums4) // returns 8
+addTwos(nums5) // returns 10
+ */
+
+var nums1 = [1, 2, 3, 4, 5];
+var nums2 = [2, 2, 3, 4, 5];
+var nums3 = [10, 0, -5, 4, 5];
+var nums4 = [2, 2, -5, 2, 2];
+var nums5 = [2, 2, 2, 2, 2];
+
+function addTwos(arr) {
+    var total = 0
+    for(var i = 0; i < arr.length; i++) {
+        if (arr[i] === 2) {
+        return total += 2
+        } else{
+            return 0
+        }
+    }
+}
+
+console.log(addTwos(nums1));
+console.log(addTwos(nums2));
+console.log(addTwos(nums3));
+console.log(addTwos(nums4));
+console.log(addTwos(nums5));

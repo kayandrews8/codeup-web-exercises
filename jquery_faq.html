@@ -69,13 +69,39 @@
     <dd class="invisible">Vehicles, and vehicle combinations, longer than 21 feet (including bumpers) or wider than 8 feet (including mirrors) are prohibited between Avalanche Campground and the Sun Point parking area. You may however, drive to Avalanche if traveling east, and to Sun Point, if traveling west. Vehicles over 10 feet in height may have difficulty driving west from Logan Pass due to rock overhangs. Stock trucks and trailers may access Packers Roost and Siyeh Bend.</dd>
 </dl>
 
-<button>Toggle Answers</button>
+<button id="answers">Toggle Answers</button>
+
+<h3>Zion National Park</h3>
+<ul>
+    <li>The park is located in southwestern Utah in Washington, Iron and Kane counties.</li>
+    <li>Archaeologists have divided the long span of Zion's human history into three cultural periods: the Archaic, Protohistoric and Historic periods</li>
+    <li>ravel to the area before it was a national park was rare due to its remote location, lack of accommodations, and the absence of real roads in southern Utah.</li>
+    <li>The Great Basin, Mojave Desert, and Colorado Plateau converge at Zion and the Kolob canyons.</li>
+</ul>
+
+<h3>Joshua Tree National Park</h3>
+<ul>
+    <li>The park's oldest rocks, Pinto Gneiss among them, are 1.7 billion years old</li>
+    <li>The total visitors more than doubled from 2013 to 2019. Awareness of the wildflower bloom in the spring has brought increased visitation.</li>
+    <li>Animals that thrive in Joshua Tree often have special adaptations for dealing with limited water and high summer temperatures.</li>
+    <li>On April 1, 2015, graffiti artist André was convicted and fined for vandalizing a boulder in the park.</li>
+</ul>
+
+<h3>Mount Rainier National Park</h3>
+<ul>
+    <li>The purpose of Mount Rainier National Park is to protect and preserve unimpaired the majestic icon of Mount Rainier, a glaciated volcano, along with its natural and cultural resources, values, and dynamic processes. </li>
+    <li>The park contains 42 locations designated on the National Register of Historic Places, including four National Historic Landmarks. </li>
+    <li>The National Park Service says that "Paradise is the snowiest place on Earth where snowfall is measured regularly."</li>
+    <li>In 1963 the National Park Service contracted Washington State University to study Native American use of the Mount Rainier area.</li>
+</ul>
+
+<button id="li-background">List Background</button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function() {
 
-        $('button').click(function(event) {
+        $('#answers').click(function(event) {
             event.preventDefault();
             $('dd').toggleClass('invisible');
         });
@@ -84,6 +110,32 @@
             $('dt').removeClass('highlight')
             $(this).addClass('highlight')
         });
+
+        $('#li-background').click(function() {
+            $('ul').each(function(){
+                $(this).children().last().addClass('highlight')
+
+            })
+        })
+
+        $('h3').click(function(){
+            $(this).next().css('font-weight','bold');
+        });
+
+        $('li').click(function(){
+            $(this)
+                .parent()
+                .children()
+                .first().css('color','blue');
+
+        })
+
+
+
+
+
+
+
     });
 </script>
 
