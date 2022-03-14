@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox API</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+
+<script>
+    mapboxgl.accessToken = MAPBOX_API_TOKEN
+
+    //Needs Geocode
+
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.5795, 39.8283], // starting position [lng, lat]
+        zoom: 3.2 // starting zoom
+    });
+
+    var popup = new mapboxgl.Popup()
+        .setHTML('TrinCiti Roti Shop');
+
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-73.8211,40.6804])
+        .setPopup(popup)
+        .addTo(map);
+
+    var popup2 = new mapboxgl.Popup()
+        .setHTML('La Madeleine Bakery');
+    var marker2 = new mapboxgl.Marker()
+        .setLngLat([-98.5825,29.5484])
+        .setPopup(popup2)
+        .addTo(map);
+
+    var popup3 = new mapboxgl.Popup()
+        .setHTML('Brasao Brazilian Steakhouse');
+    var marker3 = new mapboxgl.Marker()
+        .setLngLat([-98.6078,29.6229])
+        .setPopup(popup3)
+        .addTo(map);
+
+    var restuarants = [
+        { "name": "TrinCiti Roti Shop", "city": "Jamaica, NY"},
+        { "name": "La Madeleine Baker", "city": "San Antonio, TX"},
+        { "name": "Brasao Brazilian Steakhouse", "city": "San Antonio, TX"}
+    ]
+
+    //ADD GEOCODE
+    restuarants.forEach(function(restaurant){
+        geocode(restaurant.city, MAPBOX_API_TOKEN).then(function(results){
+            var popup = new mapboxgl.Popup()
+                .setHTML(restaurant.name)
+
+            var marker = new mapboxgl.Marker()
+                .setPopup(popup)
+                .setLngLat(results)
+                .addTo(map)
+        })
+    })
+
+</script>
+</body>
+</html>
