@@ -487,11 +487,11 @@ addTwos(nums4) // returns 8
 addTwos(nums5) // returns 10
  */
 
-var nums1 = [1, 2, 3, 4, 5];
-var nums2 = [2, 2, 3, 4, 5];
-var nums3 = [10, 0, -5, 4, 5];
-var nums4 = [2, 2, -5, 2, 2];
-var nums5 = [2, 2, 2, 2, 2];
+// var nums1 = [1, 2, 3, 4, 5];
+// var nums2 = [2, 2, 3, 4, 5];
+// var nums3 = [10, 0, -5, 4, 5];
+// var nums4 = [2, 2, -5, 2, 2];
+// var nums5 = [2, 2, 2, 2, 2];
 
 function addTwos(arr) {
     var total = 0
@@ -543,3 +543,27 @@ function returnStringObject(str){
 }
 // console.log(returnStringObject('kaylah'));
 // console.log(returnStringObject('morning'));
+
+
+/*
+Write a function, countNegatives, and takes in a array of integers and returns the total number of negative numbers. 0 should be considered a non-negative number. If no negative numbers are present, return 0.
+var nums1 = [-5, 10, 2, 5]; // countNegatives(nums1) returns 1
+var nums2 = [1, -10, -2, 5]; // countNegatives(nums2) returns 2
+var nums3 = [3, 10, 2, 5]; // countNegatives(nums3) returns 0
+var nums4 = [-3, -10]; // countNegatives(nums4) returns 2
+ */
+
+var nums2 = [1, -10, -2, 5]; // countNegatives(nums2) returns 2
+
+function countNegatives(arr){
+    var total = 0
+    for(var i = 0; i < arr.length; i++) {
+        if (arr[i] < 0){
+        return total ++;
+        } else {
+            return total;
+        }
+    }
+}
+
+// console.log(countNegatives(nums2));
