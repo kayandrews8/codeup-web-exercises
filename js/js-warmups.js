@@ -610,4 +610,11 @@ function createFirstNamesArray(userArray){
         firstNames += userArray[i].firstName;
     }
 }
-console.log(createFirstNamesArray(users)); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
+// console.log(createFirstNamesArray(users)); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
+
+var bigSquare = document.querySelector('#square');
+var colorButton = document.querySelector('#change-color');
+function changeSquare(){
+    bigSquare.style.backgroundColor = 'lavender';
+}
+colorButton.onclick = changeSquare();
