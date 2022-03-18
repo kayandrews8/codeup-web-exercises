@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <title>JavaScript Warmup</title>
     <style>
-        #square {
-            width: 200px;
+        /*#square {*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background-color: grey;*/
+        /*}*/
+        .square {
             height: 200px;
-            background-color: grey;
+            width: 200px;
+            border: 1px solid black;
+        }
+        .square:hover::after{
+            content: attr(data-color);
         }
     </style>
 </head>
 <body>
-<div id="square"></div>
-<button id="change-color">Change Color</button>
+<div class="square" data-color="blue"></div>
+<div class="square" data-color="red"></div>
+<div class="square" data-color="green"></div>
+<!--<div id="square"></div>-->
+<!--<button id="change-color">Change Color</button>-->
 <!--<h1 id="main-header">Good Morning!</h1>-->
 <!--<button id="welcome">Press if after 12pm</button>-->
 <script src="js/js-warmups.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 </body>
 </html>

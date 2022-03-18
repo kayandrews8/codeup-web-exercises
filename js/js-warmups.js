@@ -617,4 +617,17 @@ var colorButton = document.querySelector('#change-color');
 function changeSquare(){
     bigSquare.style.backgroundColor = 'lavender';
 }
-colorButton.onclick = changeSquare();
+// colorButton.onclick = changeSquare();
+
+// $('li').hover(
+//     function(){
+//         $(this).css('color', 'red');
+//     },
+//     jQuery(function($){
+//         $(".square").css("background-color",$(".square").attr("data-color"));
+//     });
+$('.square').hover(function(){
+    $(this).attr('data-color');
+}), function(){
+    $(this).attr('data-color');
+};
