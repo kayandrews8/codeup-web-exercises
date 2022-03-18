@@ -102,12 +102,17 @@
 
     // TODO 7: using reduce, return a string containing all dog names together with no spaces ("BubblesLexieDoggy...")
     // console.log('Exercise 7:');
-
+    const allDogsNames = dogs.reduce((previousValue, currentValue) => previousValue + currentValue.dogName,"");
+    console.log(allDogsNames);
     // TODO 8: using reduce, return the total of adding all dog ages together (18)
     // console.log('Exercise 8:');
+    const allDogsAges = dogAges.reduce((previousValue,currentValue) => previousValue + currentValue);
+    // console.log(allDogsAges);
 
     // TODO 9: using reduce, return an array of dog objects with all isTrained properties set to true
     // console.log('Exercise 9:');
+    const trainedDogs = dogs.map((dog) => dog.isTrained === true)
+    console.log(trainedDogs);
 
 
     // EXTRA CHALLENGES
@@ -126,6 +131,7 @@
 
     // TODO 14: create a string of the first letters of each dog name for dogs three years old (should be "LF")
     // console.log('Exercise 14:');
+
 
 </script>
 </body>
