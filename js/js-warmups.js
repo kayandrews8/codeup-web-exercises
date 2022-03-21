@@ -220,7 +220,7 @@ function changeGreeting(){
     greeting.innerText = 'Good afternoon!'
 }
 
-greetingButton.addEventListener('click', changeGreeting);
+// greetingButton.addEventListener('click', changeGreeting);
 
 /*
 ================================= JS WARM UP
@@ -626,8 +626,12 @@ function changeSquare(){
 //     jQuery(function($){
 //         $(".square").css("background-color",$(".square").attr("data-color"));
 //     });
-$('.square').hover(function(){
-    $(this).attr('data-color');
-}), function(){
-    $(this).attr('data-color');
-};
+// $('.square').hover(function(){
+//     $(this).attr('data-color');
+// }), function(){
+//     $(this).attr('data-color');
+// };
+
+$('#changingColors .square').click(function() {
+    $(this).toggleClass('yellow');
+})
