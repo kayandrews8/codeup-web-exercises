@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+(function() {
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+    $.get('data/inventory.json').done(function (products){
+        $('#products').html(products);
+    })
+    function createHTML(data) {
+        let html = '';
+        for (let i = 0; i < data.length; i += 1) {
+            html += `<tr>
+                        <td>${data[i].title}</td>
+                        <td>${data[i].quantity}</td>
+                        <td>${data[i].price}</td>
+                        <td>${data[i].categories.join(", ")}</td>
+                    </tr>`;
+        }
+        return html;
+    }
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+    function updatePage() {
+        $.get('data/inventory.json').load(function (products) {
+            $('#insertProducts').html(createHTML(products))
+        });
+    }
+
+
+
+
+
+})();
+
+
+// function updatePage() {
+//     // make a request to the json file, order.json
+//     $.get('data/orders.json').done(function(orders) {
+//         $('#orders').html(createHTML(orders));
+//     });
+// }
+//
+// // when a user clicks on the update button, refresh the page with the latest order information
+// $('#update').click(function() {
+//     updatePage()
+//     setInterval(updatePage, 5000);
+// });
+</script>
+
+</body>
+</html>
