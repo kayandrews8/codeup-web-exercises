@@ -635,3 +635,30 @@ function changeSquare(){
 $('#changingColors .square').click(function() {
     $(this).toggleClass('yellow');
 })
+
+/*
+Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
+    ‘a’ or ‘A’ becomes ‘@’
+‘i’ or ‘I’ becomes ‘1’
+‘s’ or ‘S’ becomse ‘$’
+encodeStr(‘apple’) // returns ‘@pple’
+encodeStr(‘codeup’) // returns ‘codeup’
+encodeStr(‘SASS’) // returns ‘$@$$’
+encodeStr(‘bike’) // returns ‘b1ke’
+*/
+
+function encodeStr(str){
+    return str
+        .replaceAll('a','@')
+        .replaceAll('A','@')
+        .replaceAll('i','1')
+        .replaceAll('I','1')
+        .replaceAll('s','$')
+        .replaceAll('S','$')
+}
+
+console.log(encodeStr('bike'));
+console.log(encodeStr('apple'));
+console.log(encodeStr('codeup'));
+console.log(encodeStr('SASS'));
+
