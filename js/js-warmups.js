@@ -648,13 +648,11 @@ encodeStr(‘bike’) // returns ‘b1ke’
 */
 
 function encodeStr(str){
-    return str
+    var lowercase = str.toLowerCase();
+    return lowercase
         .replaceAll('a','@')
-        .replaceAll('A','@')
         .replaceAll('i','1')
-        .replaceAll('I','1')
         .replaceAll('s','$')
-        .replaceAll('S','$')
 }
 
 console.log(encodeStr('bike'));
