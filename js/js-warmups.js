@@ -655,8 +655,26 @@ function encodeStr(str){
         .replaceAll('s','$')
 }
 
-console.log(encodeStr('bike'));
-console.log(encodeStr('apple'));
-console.log(encodeStr('codeup'));
-console.log(encodeStr('SASS'));
+// console.log(encodeStr('bike'));
+// console.log(encodeStr('apple'));
+// console.log(encodeStr('codeup'));
+// console.log(encodeStr('SASS'));
+
+
+/*
+================================= WARM UP
+
+Write a function, returnMostCommonVowel, that takes in a string and returns the most common vowel in the string.
+Assume the characters in the string are all lowercase and only 'a' 'e' 'i' 'o' 'u' count as vowels. Return the most common vowel from the string.
+
+If the highest vowel count is shared between multiple vowels, return the first vowel alphabetically. (2 'a's and 2 'e's should 'a')
+
+If no vowels are in the string return false.
+ */
+
+function returnMostCommonVowel(str){
+    let wordArr = str.split("");
+    let newWordArr = wordArr.filter(char => char === 'a' || char === 'e' || char === 'i' || char === 'u')
+    return newWordArr.length
+}
 
