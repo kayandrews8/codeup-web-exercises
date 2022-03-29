@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Ajax Blog</title>
+    <style>
+        body {
+            background-color: rgb(217, 208, 198);
+            font-family: Al Bayan, sans-serif;
+        }
+        div {
+            border: 1px solid transparent;
+        }
+        h1 {
+
+        }
+    </style>
 </head>
 <body>
+<h1>Welcome</h1>
 <div id="container"></div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
@@ -15,11 +28,11 @@
             let html = "";
             for(let i = 0; i < data.length; i += 1){
                 html += '<div> ' +
-                    '       <h2>${data[i].title}</h2>' +
-                    '       <p>${data[i].content}</p>' +
-                    '       <p>${data[i].categories}</p>' +
-                    '       <p>${data[i].date}</p>' +
-                    '   </div>';
+                    `       <h2>${data[i].title}</h2>` +
+                    `       <p>${data[i].content}</p>` +
+                    `       <p>${data[i].categories}</p>` +
+                    `       <p>${data[i].date}</p>` +
+                    `   </div>`;
             }
             return html;
         }
