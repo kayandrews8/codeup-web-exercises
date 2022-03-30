@@ -272,7 +272,7 @@ returnMostFrequentUser(users) should return...
     numberOfLogins: 100
 }
 */
-
+/*
 var users = [
     {
         username: 'fsmith',
@@ -290,6 +290,7 @@ var users = [
         numberOfLogins: 10
     }
 ];
+ */
 
 function returnFirstUser(arr){
     return arr[0];
@@ -574,6 +575,7 @@ Create a function, createFirstNamesArray, that takes in an array of user objects
 
     Example...
 */
+/*
 var users = [
     {
         firstName: 'Bob',
@@ -601,6 +603,7 @@ var users = [
         email: 'joe@email.com'
     },
 ];
+ */
 
 
 
@@ -678,3 +681,46 @@ function returnMostCommonVowel(str){
     return newWordArr.length
 }
 
+/*
+================================= WARM UP
+
+Create a function, returnAvgAdminSalary, that takes in an array of users and returns the average salary of all admins. Round to the nearest dollar.
+
+    Example:
+
+ */
+
+const users = [
+    {
+        name: 'Fred',
+        isAdmin: true,
+        salary: 20000
+    },
+    {
+        name: 'Cathy',
+        isAdmin: false,
+        salary: 40000
+    },
+    {
+        name: 'Sally',
+        isAdmin: true,
+        salary: 80000
+    },
+    {
+        name: 'Kyle',
+        isAdmin: true,
+        salary: 50000
+    },
+    {
+        name: 'Cynthia',
+        isAdmin: false,
+        salary: 100000
+    }
+];
+
+function returnAvgAdminSalary(){
+    const adminsOnly = users.filter(user => user.isAdmin);
+    return adminsOnly.reduce((previousValue, currentValue) => previousValue + currentValue.salary,0) / adminsOnly.length;
+}
+
+console.log(returnAvgAdminSalary(users)); // returns 50000
